@@ -17,11 +17,11 @@ circles, representing C, A, and P. The diagram shows that there is no overlap be
 circles, yet there is an overlap between all pairs of the circles.
 
 When thinking about this theorem, I tried to picture three gauges.
-When we slowly increase any two of them, the third is automatically decreased.
+When we slowly increase any two of them, the third gets automatically decreased.
 And then I tried to think concretely - how do you slowly decrease availability?
 Availability is a binary switch, not the sliding scale like the other two.
 
-Are the Venn diagrams implying sliding scales on all three of the C, A, P incorrect?
+Are Venn diagrams implying sliding scales on all three of the C, A, P incorrect?
 
 # CAP Definition of Availability
 
