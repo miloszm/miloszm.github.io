@@ -39,7 +39,8 @@ Partition Tolerance), and you neglect A. You tolerate low A, meaning:
 - you tolerate nodes not serving users until they catch up with other nodes
 
 Consistency is a spectrum - strong, sequential, causal, eventual.
-Partition tolerance is a spectrum - you retry for 1 second vs. 10 seconds.
+Partition tolerance can be thought of as a spectrum in practice — e.g., how long you wait before assuming a 
+partition has occurred (timeouts), or how many messages can be lost before the system gives up.
 Low availability means - you are ok with your system timing out users rather than serving stale data.
 
 In real life, we can turn 20 out of 100 nodes off and say the system is less available.
