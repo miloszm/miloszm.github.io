@@ -15,7 +15,7 @@ Theorem states that:
 - in an asynchronous distributed system
 - where processes can crash
 
-it is impossible for a deterministic algorithm to achieve consensus in a finite amount of time
+there is no deterministic algorithm that can guarantee consensus in bounded time.
 
 "Asynchronous distributed system" means that message passing may take arbitrarily long.
 There is no timeout that would let us state that some messages are lost or some processes are down.
@@ -45,12 +45,16 @@ of response, as there is no limit for it to arrive. In such case,
 we may never reach the conclusion of the decision process.
 
 # How do Blockchains Deal with FLP?
-Bitcoin uses a randomized algorithm to come up with a decision, and then it assumes that eventually everyone will agree with it.
+Bitcoin uses a probabilistic leader election to come up with a decision, and then it assumes that eventually everyone will agree with it.
 The decision is taken with asymptotically increasing probability of being final.
 It is not final right away, yet is final with high probability after six blocks.
 
 Cosmos network uses explicit timeouts for its voting rounds. Validators take turns proposing blocks.
 If more than one-third of the validators go offline, blockchain stops moving, choosing safety over liveness.
+Note that this works because Cosmos has a known validator set (permissioned or proof-of-stake) 
+where validators can be held accountable. A purely permissionless system cannot rely on 
+timeouts alone, as an attacker could manipulate them to win elections—this is why permissionless 
+systems must lean on randomization, while systems with known validators can use timeouts.
 
 These two examples show us two approaches of bypassing the FLP impossibility:
 - Bitcoin focuses on a randomized element, trying not to impose timeouts but rather relies on decreasing probabilities of finality.
@@ -76,11 +80,11 @@ In essence, elections are not always randomized.
 Yet they need to be in permissionless systems.
 
 For CFT (Crash Fault Tolerance) they do not need to be randomized (unless for a tie breaking).
-Yet for BFT (Byzantine Fault Tolerance - meaning - when malicious behavior is possible and considered),
+Yet for BFT (Byzantine Fault Tolerance - meaning - when malicious or unpredictable behavior is possible and considered),
 elections must be randomized to beat FLP.
 
 To be exact, elections in permissionless systems must be unpredictable and unbiased, they do not need to
 have uniform distribution to deserve the randomized name in a mathematical sense.
 
 # Conclusion
-FTP Impossibility Theorem is the mental anchor for thinking about blockchain consensus. 
+FLP Impossibility Theorem is the mental anchor for thinking about blockchain consensus. 
