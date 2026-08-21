@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "FLP Impossibility and Blockchain Consensus"
+title: "FLP Impossibility Theorem: What It Actually Says and How Blockchains Bypass It"
 date: 2026-08-18
 categories: blockchain
 author: Milosz Muszynski
