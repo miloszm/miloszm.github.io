@@ -3,7 +3,7 @@ layout: post
 title: "FLP Impossibility Theorem: What It Actually Says and How Blockchains Bypass It"
 date: 2026-08-18
 categories: blockchain
-tags: distributed-systems, flp-impossibility, blockchain-consensus, cap-theorem
+tags: [distributed-systems, flp-impossibility, blockchain-consensus, cap-theorem]
 author: Milosz Muszynski
 ---
 
