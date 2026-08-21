@@ -3,6 +3,7 @@ layout: post
 title: "CAP Theorem: Gauges, Binary Switches, and What the Venn Diagram Gets Wrong"
 date: 2026-08-18
 categories: blockchain
+tags: distributed-systems, cap-theorem
 author: Milosz Muszynski
 ---
 
